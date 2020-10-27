@@ -103,6 +103,80 @@
             "windows":true,
             "mac":true,
             "docker":true
+        },
+      {
+            "en": {
+                "title": "Get User Name",
+                "description": "Return user name",
+                "title_options": "Select Option",
+                "options":null
+            },
+            "es": {
+                "title": "Obtener nombre de usuario",
+                "description": "Retorna el nombre de usuario actual",
+                "title_options": "Seleccione una opción",
+                "options": null
+            },
+            "form": {
+                "css": "modal-lg",
+                "inputs": [
+                    {
+                        "type": "input",
+                        "placeholder":"Variable",
+                        "title": {
+                            "es": "Asignar resultado a variable:",
+                            "en": "Assign result to a variable:"
+                        },
+                         "help": {
+                            "es": "Nombre de variable sin {}",
+                            "en": "Variable name without {}"
+                        },
+                        "id": "var_",
+                        "css": "col-md-12"
+                    }
+                ]
+            },
+            "video_youtube": "aMV6cXPMMSo",
+            "icon": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBvbHlnb24gc3R5bGU9ImZpbGw6IzAwQkNENDsiIHBvaW50cz0iMjI0LDI0MCAyMjQsNTIgMCw4MCAwLDI0MCAJIi8+DQoJPHBvbHlnb24gc3R5bGU9ImZpbGw6IzAwQkNENDsiIHBvaW50cz0iMjU2LDI0MCA1MTIsMjQwIDUxMiwxNiAyNTYsNDggCSIvPg0KCTxwb2x5Z29uIHN0eWxlPSJmaWxsOiMwMEJDRDQ7IiBwb2ludHM9IjI1NiwyNzIgMjU2LDQ2NCA1MTIsNDk2IDUxMiwyNzIgCSIvPg0KCTxwb2x5Z29uIHN0eWxlPSJmaWxsOiMwMEJDRDQ7IiBwb2ludHM9IjIyNCwyNzIgMCwyNzIgMCw0MzIgMjI0LDQ2MCAJIi8+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==",
+            "module": "getUserName",
+            "module_name": "Windows",
+            "visible": true,
+            "options": false,
+            "father": "module",
+            "group": "scripts",
+            "linux": true,
+            "windows":true,
+            "mac":true,
+            "docker":true
+        },
+      {
+            "en": {
+                "title": "Lock Windows Screen",
+                "description": "Lock Windows Screen",
+                "title_options": "Select Option",
+                "options":null
+            },
+            "es": {
+                "title": "Bloquear pantalla ",
+                "description": "Bloquea la pantalla de Windows",
+                "title_options": "Seleccione una opción",
+                "options": null
+            },
+            "form": {
+                "css": "modal-lg"
+            },
+            "video_youtube": "aMV6cXPMMSo",
+            "icon": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBvbHlnb24gc3R5bGU9ImZpbGw6IzAwQkNENDsiIHBvaW50cz0iMjI0LDI0MCAyMjQsNTIgMCw4MCAwLDI0MCAJIi8+DQoJPHBvbHlnb24gc3R5bGU9ImZpbGw6IzAwQkNENDsiIHBvaW50cz0iMjU2LDI0MCA1MTIsMjQwIDUxMiwxNiAyNTYsNDggCSIvPg0KCTxwb2x5Z29uIHN0eWxlPSJmaWxsOiMwMEJDRDQ7IiBwb2ludHM9IjI1NiwyNzIgMjU2LDQ2NCA1MTIsNDk2IDUxMiwyNzIgCSIvPg0KCTxwb2x5Z29uIHN0eWxlPSJmaWxsOiMwMEJDRDQ7IiBwb2ludHM9IjIyNCwyNzIgMCwyNzIgMCw0MzIgMjI0LDQ2MCAJIi8+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==",
+            "module": "lockWindows",
+            "module_name": "Windows",
+            "visible": true,
+            "options": false,
+            "father": "module",
+            "group": "scripts",
+            "linux": true,
+            "windows":true,
+            "mac":true,
+            "docker":true
         }
     ]
 }

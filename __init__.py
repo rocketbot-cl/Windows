@@ -30,6 +30,7 @@ sys.path.append(cur_path)
 """
     Obtengo el modulo que fue invocado
 """
+
 module = GetParams("module")
 
 if module == "resize":
@@ -64,3 +65,20 @@ if module == "getResolution":
         print("\x1B[" + "31;40mAn error occurred\u2193\x1B[" + "0m")
         PrintException()
         raise e
+
+if module == "getUserName":
+    import user
+    username = user.get_username()
+    print(username)
+    var_ = GetParams("var_")
+    try:
+        SetVar(var_, user.get_username())
+    except Exception as e:
+        print("\x1B[" + "31;40mAn error occurred\u2193\x1B[" + "0m")
+        PrintException()
+        raise e
+
+if module == "lockWindows":
+    from screen import ScreenRes
+    print("Se ha bloqueado su pantalla!")
+    ScreenRes.lock_windows()

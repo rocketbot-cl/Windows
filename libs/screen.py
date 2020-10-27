@@ -1,4 +1,5 @@
 import sys
+import platform
 
 
 class ScreenRes(object):
@@ -36,6 +37,37 @@ class ScreenRes(object):
             return cls._linux_get_modes()
         elif sys.platform.startswith('darwin'):
             return cls._osx_get_modes()
+
+    @staticmethod
+    def lock_windows():
+        def only_supported_for(*args):
+            """
+            Utility function for checking platform support
+            Example usage:
+            only_supported_for("Windows", "Linux")
+            """
+
+            if platform.system() not in args:
+                raise NotImplementedError(
+                    "This activity is currently only supported for {}.".format(
+                        ", ".join(args)
+                    )
+                )
+
+        """Lock Windows
+        Locks Windows requiring login to continue.
+            :Example:
+        >>> lock_windows()
+        Keywords
+            windows, user, password, account, lock, freeze, hibernate, sleep, lockescreen
+        Icon
+            las la-user-lock
+        """
+        only_supported_for("Windows")
+
+        import ctypes
+
+        ctypes.windll.user32.LockWorkStation()
 
     @staticmethod
     def _win32_get_modes():
