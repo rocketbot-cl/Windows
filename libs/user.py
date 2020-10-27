@@ -57,6 +57,30 @@ def set_user_password(username, password):
     user.SetPassword(password)
 
 
+def is_logged_in():
+    """Check if Windows logged in
+    Checks if the current user is logged in and not on the lockscreen. Most automations do not work properly when the desktop is locked.
+    :return: True if the user is logged in, False if not
+        :Example:
+    >>> is_logged_in()
+    True
+    Keywords
+        windows, login, logged in, lockscreen, user, password, account, lock, freeze, hibernate, sleep
+    Icon
+        lar la-user
+    """
+    only_supported_for("Windows")
+
+    import subprocess  # nosec
+
+    output = subprocess.check_output("TASKLIST")
+
+    if "LogonUI.exe" in str(output):
+        return False
+    else:
+        return True
+
+
 if __name__ == '__main__':
     print("Hello World!")
     # set_user_password(get_username(),"nicolas14") Error de win32

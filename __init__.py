@@ -68,11 +68,11 @@ if module == "getResolution":
 
 if module == "getUserName":
     import user
-    username = user.get_username()
-    print(username)
-    var_ = GetParams("var_")
+
     try:
-        SetVar(var_, user.get_username())
+        username = user.get_username()
+        var_ = GetParams("var_")
+        SetVar(var_, username)
     except Exception as e:
         print("\x1B[" + "31;40mAn error occurred\u2193\x1B[" + "0m")
         PrintException()
@@ -80,5 +80,23 @@ if module == "getUserName":
 
 if module == "lockWindows":
     from screen import ScreenRes
-    print("Se ha bloqueado su pantalla!")
-    ScreenRes.lock_windows()
+
+    try:
+        print("Se ha bloqueado su pantalla!")
+        ScreenRes.lock_windows()
+    except Exception as e:
+        print("\x1B[" + "31;40mAn error occurred\u2193\x1B[" + "0m")
+        PrintException()
+        raise e
+
+if module == "isLoggedIn":
+    import user
+
+    try:
+        var_ = GetParams("var_")
+        is_logged_in = user.is_logged_in()
+        SetVar(var_, is_logged_in)
+    except Exception as e:
+        print("\x1B[" + "31;40mAn error occurred\u2193\x1B[" + "0m")
+        PrintException()
+        raise e
