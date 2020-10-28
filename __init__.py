@@ -100,3 +100,108 @@ if module == "isLoggedIn":
         print("\x1B[" + "31;40mAn error occurred\u2193\x1B[" + "0m")
         PrintException()
         raise e
+
+if module == "maximizeWindow":
+    import window
+
+    title = GetParams("title")
+    try:
+        window.maximize_window(title)
+    except Exception as e:
+        print("\x1B[" + "31;40mAn error occurred\u2193\x1B[" + "0m")
+        PrintException()
+        raise e
+
+if module == "restoreWindow":
+    import window
+
+    title = GetParams("title")
+    try:
+        window.restore_window(title)
+    except Exception as e:
+        print("\x1B[" + "31;40mAn error occurred\u2193\x1B[" + "0m")
+        PrintException()
+        raise e
+
+if module == "minimizeWindow":
+    import window
+
+    title = GetParams("title")
+    try:
+        window.minimize_window(title)
+    except Exception as e:
+        print("\x1B[" + "31;40mAn error occurred\u2193\x1B[" + "0m")
+        PrintException()
+        raise e
+
+if module == "setForeground":
+    import window
+
+    title = GetParams("title")
+    try:
+        window.set_foreground_app(title)
+    except Exception as e:
+        print("\x1B[" + "31;40mAn error occurred\u2193\x1B[" + "0m")
+        PrintException()
+        raise e
+
+if module == "findWindow":
+    import window
+
+    title = GetParams("title")
+    try:
+        window_title = window.find_window_title(title)
+        var_ = GetParams("var_")
+        SetVar(var_, window_title)
+    except Exception as e:
+        print("\x1B[" + "31;40mAn error occurred\u2193\x1B[" + "0m")
+        PrintException()
+        raise e
+
+if module == "getServiceStatus":
+    import service_windows
+
+    title = GetParams("title")
+    try:
+        service_status = service_windows.get_service_status(title)
+        var_ = GetParams("var_")
+        SetVar(var_, service_status)
+    except Exception as e:
+        print("\x1B[" + "31;40mAn error occurred\u2193\x1B[" + "0m")
+        PrintException()
+        raise e
+
+if module == "startService":
+    import service_windows
+
+    title = GetParams("title")
+    try:
+        service_status = service_windows.get_service_status(title)
+        if service_status != "running":
+            service_windows.start_service(title)
+            service_status = service_windows.get_service_status(title)
+        var_ = GetParams("var_")
+        SetVar(var_, service_status)
+    except Exception as e:
+        print("\x1B[" + "31;40mAn error occurred\u2193\x1B[" + "0m")
+        PrintException()
+        raise e
+
+if module == "stopService":
+    import service_windows
+
+    title = GetParams("title")
+    try:
+        service_status = service_windows.get_service_status(title)
+        if service_status == "running":
+            service_windows.stop_service(title)
+            service_status = service_windows.get_service_status(title)
+        var_ = GetParams("var_")
+        SetVar(var_, service_status)
+    except Exception as e:
+        print("\x1B[" + "31;40mAn error occurred\u2193\x1B[" + "0m")
+        PrintException()
+        raise e
+
+
+

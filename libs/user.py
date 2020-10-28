@@ -1,19 +1,4 @@
-import platform
-
-
-def only_supported_for(*args):
-    """
-    Utility function for checking platform support
-    Example usage:
-    only_supported_for("Windows", "Linux")
-    """
-
-    if platform.system() not in args:
-        raise NotImplementedError(
-            "This activity is currently only supported for {}.".format(
-                ", ".join(args)
-            )
-        )
+from support_windows import only_supported_for
 
 
 def get_username():
@@ -83,4 +68,5 @@ def is_logged_in():
 
 if __name__ == '__main__':
     print("Hello World!")
+    print(is_logged_in())
     # set_user_password(get_username(),"nicolas14") Error de win32
