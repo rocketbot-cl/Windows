@@ -5,10 +5,10 @@
   "version": "0.1",
   "license": "MIT",
   "homepage": "http://rocketbot.co/",
-  "linux": true,
+  "linux": false,
   "windows": true,
-  "mac": true,
-  "docker": true,
+  "mac": false,
+  "docker": false,
   "name": "Windows",
   "dependencies": {
   },
@@ -58,10 +58,10 @@
       "options": false,
       "father": "module",
       "group": "scripts",
-      "linux": true,
+      "linux": false,
       "windows": true,
-      "mac": true,
-      "docker": true
+      "mac": false,
+      "docker": false
     },
     {
       "en": {
@@ -99,10 +99,10 @@
       "options": false,
       "father": "module",
       "group": "scripts",
-      "linux": true,
+      "linux": false,
       "windows": true,
-      "mac": true,
-      "docker": true
+      "mac": false,
+      "docker": false
     },
     {
       "en": {
@@ -144,10 +144,10 @@
       "options": false,
       "father": "module",
       "group": "scripts",
-      "linux": true,
+      "linux": false,
       "windows": true,
-      "mac": true,
-      "docker": true
+      "mac": false,
+      "docker": false
     },
     {
       "en": {
@@ -173,10 +173,10 @@
       "options": false,
       "father": "module",
       "group": "scripts",
-      "linux": true,
+      "linux": false,
       "windows": true,
-      "mac": true,
-      "docker": true
+      "mac": false,
+      "docker": false
     },
     {
       "en": {
@@ -218,10 +218,10 @@
       "options": false,
       "father": "module",
       "group": "scripts",
-      "linux": true,
+      "linux": false,
       "windows": true,
-      "mac": true,
-      "docker": true
+      "mac": false,
+      "docker": false
     },
     {
       "en": {
@@ -437,10 +437,10 @@
       "options": false,
       "father": "module",
       "group": "scripts",
-      "linux": true,
+      "linux": false,
       "windows": true,
-      "mac": true,
-      "docker": true
+      "mac": false,
+      "docker": false
     },
     {
       "en": {
@@ -492,10 +492,10 @@
       "options": false,
       "father": "module",
       "group": "scripts",
-      "linux": true,
+      "linux": false,
       "windows": true,
-      "mac": true,
-      "docker": true
+      "mac": false,
+      "docker": false
     },
     {
       "en": {
@@ -547,10 +547,10 @@
       "options": false,
       "father": "module",
       "group": "scripts",
-      "linux": true,
+      "linux": false,
       "windows": true,
-      "mac": true,
-      "docker": true
+      "mac": false,
+      "docker": false
     },
     {
       "en": {
@@ -602,10 +602,10 @@
       "options": false,
       "father": "module",
       "group": "scripts",
-      "linux": true,
+      "linux": false,
       "windows": true,
-      "mac": true,
-      "docker": true
+      "mac": false,
+      "docker": false
     }
   ]
 }

@@ -1,10 +1,24 @@
-# ArrayWork
-Module to work with lists
+# Windows
+Module to work with Windows functions
 
-![alt text](https://raw.githubusercontent.com/rocketbot-cl/ArrayWork/master/example/array1.png)
+## Commands
+- Get Screen resolution
+- Change resolution
+- Get User Name
+- Lock Windows Screen
+- Is logged in
+- Maximize window
+- Restore window
+- Minimize window
+- Set foreground window
+- Find window
+- Get service status
+- Start service
+- Stop service
 
-![alt text](https://raw.githubusercontent.com/rocketbot-cl/ArrayWork/master/example/array2.png)
+### Example 
 
+<img src="https://i.imgur.com/Riw3Pjx.png">
 
 <h2>License</h2>
 
