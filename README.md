@@ -1,9 +1,5 @@
 # Windows
-<<<<<<< HEAD
 Module to work with Windows functions
-=======
-Module to work with Microsfot Windows functions
->>>>>>> dc34fb414eb5fecf28059500f872a57aa8343bd8
 
 ## Commands
 - Get Screen resolution
@@ -19,11 +15,8 @@ Module to work with Microsfot Windows functions
 - Get service status
 - Start service
 - Stop service
-<<<<<<< HEAD
 
 ### Example 
-=======
->>>>>>> dc34fb414eb5fecf28059500f872a57aa8343bd8
 
 <img src="https://i.imgur.com/Riw3Pjx.png">
 
