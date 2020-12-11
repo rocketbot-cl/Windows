@@ -1,5 +1,5 @@
 # Windows
-Module to work with Microsfot Windows functions
+Module to work with Windows functions
 
 ## Commands
 - Get Screen resolution
@@ -16,6 +16,9 @@ Module to work with Microsfot Windows functions
 - Start service
 - Stop service
 
+### Example 
+
+<img src="https://i.imgur.com/Riw3Pjx.png">
 
 <h2>License</h2>
 
