@@ -39,6 +39,7 @@ if module == "resize":
     resolution = GetParams("resolution")
     print(resolution)
     try:
+        print(ScreenRes.get_modes())
         if resolution is not "" and resolution is not None:
             print('Changing resolution from: {}x{} to {}'.format(
                 *ScreenRes.get(),
@@ -139,6 +140,7 @@ if module == "setForeground":
 
     title = GetParams("title")
     try:
+        title = eval(title)
         window.set_foreground_app(title)
     except Exception as e:
         print("\x1B[" + "31;40mAn error occurred\u2193\x1B[" + "0m")
@@ -202,6 +204,28 @@ if module == "stopService":
         print("\x1B[" + "31;40mAn error occurred\u2193\x1B[" + "0m")
         PrintException()
         raise e
+
+if module == "moveWindow":
+    title = GetParams("title")
+    coord = GetParams("coordinates")
+    size = GetParams("size")
+
+    import win32gui
+
+    handle = win32gui.FindWindow(None, "Note (98.260.00) From (0.3.250.00)")
+    if not size:
+        rect = win32gui.GetWindowRect(handle)
+        w = rect[2] - rect[0]
+        h = rect[3] - rect[1]
+    else:
+        w, h = eval(size)
+    if coord:
+        x, y = eval(coord)
+    else:
+        x, y = (0, 0)
+
+    win32gui.MoveWindow(handle, x, y, w, h, True)
+
 
 
 
