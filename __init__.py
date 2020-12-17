@@ -136,17 +136,29 @@ if module == "minimizeWindow":
         raise e
 
 if module == "setForeground":
-    import window
-
-    title = GetParams("title")
     try:
-        title = eval(title)
-        window.set_foreground_app(title)
+        import win32gui
+        title = GetParams("title")
+        def set_window_to_foreground(title):
+            import win32gui
+            import win32con
+            import win32com
+            try:
+                handle = win32gui.FindWindow(None, title)
+                if not handle:
+                    raise Exception('Could not find a window with title "{}"'.format(title))
+
+                win32gui.ShowWindow(handle, win32con.SW_SHOWMAXIMIZED)
+                shell = win32com.client.Dispatch("WScript.Shell")
+                shell.SendKeys('%')
+                win32gui.SetForegroundWindow(handle)
+            except Exception as ex:
+                raise ex
+        set_window_to_foreground(title)
     except Exception as e:
         print("\x1B[" + "31;40mAn error occurred\u2193\x1B[" + "0m")
         PrintException()
         raise e
-
 if module == "findWindow":
     import window
 
