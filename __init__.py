@@ -139,15 +139,11 @@ if module == "listWindows":
     
     
     try:
-        
         import win32gui
-        
-        # print(win32gui.__file__)
 
         varToSaveIn = GetParams("varToSaveIn")
         checkHandles = GetParams("checkHandles")
-
-        # print(checkHandles)
+        varFilter = GetParams("varFilter")
 
         handleInfo = []
 
@@ -160,25 +156,30 @@ if module == "listWindows":
 
         finalHandleInfo = []
 
-        # print(handleInfo)
-
         for h in handleInfo:
-
-            print(h)
+            # h is each handle
+            # h[0] => each number of the handle
+            # h[1] => each name (str) of the handle
             
-            if (checkHandles):
+            if (checkHandles == 'True'):
                     if (h[1] != ''):
-                        finalHandleInfo.append(h)
+                        if (varFilter):
+                            result = h[1].find(varFilter)
+                            if (result > -1):
+                                finalHandleInfo.append(h)
+                        else:
+                            finalHandleInfo.append(h)
             else:
+                print(checkHandles)
                 if (h[1] != ''):
-                    finalHandleInfo.append(h[1])
+                    if (varFilter):
+                        result = h[1].find(varFilter)
+                        print(result)
+                        if (result > -1):
+                            finalHandleInfo.append(h[1])
+                    else:
+                        finalHandleInfo.append(h[1])
 
-            # for handle and name
-            # print(h)
-            # for name only
-            # print(h[1])
-        # print(handleInfo)
-        # print(finalHandleInfo)
         SetVar(varToSaveIn, finalHandleInfo)
 
     except Exception as e:

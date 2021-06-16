@@ -365,8 +365,8 @@
                 {
                     "type": "input",
                     "placeholder": {
-                        "es": "variable",
-                        "en": "variable"
+                        "es": "Variable",
+                        "en": "Variable"
                     },
                     "title": {
                         "es": "Guardar en",
@@ -390,6 +390,19 @@
                         "en": "Check if you want them"
                     },
                     "id": "checkHandles",
+                    "css": "col-md-6"
+                },
+                {
+                    "type": "input",
+                    "placeholder": {
+                        "es": "Palabra a buscar",
+                        "en": "Find word"
+                    },
+                    "title": {
+                        "es": "Filtro",
+                        "en": "Filter"
+                    },
+                    "id": "varFilter",
                     "css": "col-md-6"
                 }
             ]
