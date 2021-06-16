@@ -135,6 +135,57 @@ if module == "minimizeWindow":
         PrintException()
         raise e
 
+if module == "listWindows":
+    
+    
+    try:
+        
+        import win32gui
+        
+        # print(win32gui.__file__)
+
+        varToSaveIn = GetParams("varToSaveIn")
+        checkHandles = GetParams("checkHandles")
+
+        # print(checkHandles)
+
+        handleInfo = []
+
+        def winEnumHandler(hwnd, ctx):
+                    global handleInfo
+                    if win32gui.IsWindowVisible(hwnd):
+                        handleInfo.append((hwnd, win32gui.GetWindowText(hwnd)))
+
+        win32gui.EnumWindows(winEnumHandler, None)
+
+        finalHandleInfo = []
+
+        # print(handleInfo)
+
+        for h in handleInfo:
+
+            print(h)
+            
+            if (checkHandles):
+                    if (h[1] != ''):
+                        finalHandleInfo.append(h)
+            else:
+                if (h[1] != ''):
+                    finalHandleInfo.append(h[1])
+
+            # for handle and name
+            # print(h)
+            # for name only
+            # print(h[1])
+        # print(handleInfo)
+        # print(finalHandleInfo)
+        SetVar(varToSaveIn, finalHandleInfo)
+
+    except Exception as e:
+        print("\x1B[" + "31;40mAn error occurred\u2193\x1B[" + "0m")
+        PrintException()
+        raise e
+
 if module == "setForeground":
     try:
         import win32gui
