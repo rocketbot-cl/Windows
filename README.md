@@ -10,6 +10,7 @@ Module to work with Windows functions
 - Maximize window
 - Restore window
 - Minimize window
+- List windows
 - Set foreground window
 - Find window
 - Get service status
