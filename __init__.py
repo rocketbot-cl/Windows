@@ -276,7 +276,7 @@ if module == "moveWindow":
 
     import win32gui
 
-    handle = win32gui.FindWindow(None, "Note (98.260.00) From (0.3.250.00)")
+    handle = win32gui.FindWindow(None, title)
     if not size:
         rect = win32gui.GetWindowRect(handle)
         w = rect[2] - rect[0]
