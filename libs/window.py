@@ -26,7 +26,11 @@ def maximize_window(title):
         )
 
     win32gui.ShowWindow(handle, win32con.SW_SHOWMAXIMIZED)
-    win32gui.SetForegroundWindow(handle)
+    try:
+        win32gui.SetForegroundWindow(handle)
+    except:
+        pass
+
 
 
 def restore_window(title):
@@ -54,7 +58,10 @@ def restore_window(title):
         )
 
     win32gui.ShowWindow(handle, win32con.SW_RESTORE)
-    win32gui.SetForegroundWindow(handle)
+    try:
+        win32gui.SetForegroundWindow(handle)
+    except:
+        pass
 
 
 def minimize_window(title):

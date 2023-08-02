@@ -1,10 +1,15 @@
 {
-  "author": "Danilo Toro",
-  "description": "Working with Windows configuration",
+  "author": "Danilo Toro - Nicolas Garcia",
+  "description": "Module for work with Windows configuration",
+  "description_lang": {
+    "es": "Módulo para trabajar con la configuración de Windows",
+    "en": "Module for work with Windows configuration",
+    "pr": "Modulo para trabalhar com a configuração do Windows"
+  },
   "disclaimer": "THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "license": "MIT",
-  "homepage": "http://rocketbot.co/",
+  "homepage": "http://rocketbot.com/",
   "linux": false,
   "windows": true,
   "mac": false,
@@ -14,21 +19,28 @@
   },
   "title": {
     "en": "Windows",
-    "es": "Windows"
+    "es": "Windows",
+    "pr": "Windows"
   },
   "icon": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBvbHlnb24gc3R5bGU9ImZpbGw6IzAwQkNENDsiIHBvaW50cz0iMjI0LDI0MCAyMjQsNTIgMCw4MCAwLDI0MCAJIi8+DQoJPHBvbHlnb24gc3R5bGU9ImZpbGw6IzAwQkNENDsiIHBvaW50cz0iMjU2LDI0MCA1MTIsMjQwIDUxMiwxNiAyNTYsNDggCSIvPg0KCTxwb2x5Z29uIHN0eWxlPSJmaWxsOiMwMEJDRDQ7IiBwb2ludHM9IjI1NiwyNzIgMjU2LDQ2NCA1MTIsNDk2IDUxMiwyNzIgCSIvPg0KCTxwb2x5Z29uIHN0eWxlPSJmaWxsOiMwMEJDRDQ7IiBwb2ludHM9IjIyNCwyNzIgMCwyNzIgMCw0MzIgMjI0LDQ2MCAJIi8+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==",
   "children": [
     {
+      "es": {
+        "title": "Obtener resolución de pantalla",
+        "description": "Retorna la resolución actual de la pantalla principal a una variable de Rocketbot",
+        "title_options": "Seleccione una opción",
+        "options": null
+      },
       "en": {
         "title": "Get Screen resolution",
-        "description": "Return screen resolution",
+        "description": "Return the current resolution of the main screen to a Rocketbot variable",
         "title_options": "Select Option",
         "options": null
       },
-      "es": {
-        "title": "Obtener resolución de pantalla",
-        "description": "Retorna la resolución actual de la pantalla",
-        "title_options": "Seleccione una opción",
+      "pr": {
+        "title": "Obter resolução de tela",
+        "description": "Retorna a resolução atual da tela principal para uma variável do Rocketbot",
+        "title_options": "Selecione uma opção",
         "options": null
       },
       "form": {
@@ -39,18 +51,28 @@
             "placeholder": "Variable",
             "title": {
               "es": "Asignar resultado a variable:",
-              "en": "Assign result to a variable:"
+              "en": "Assign result to a variable:",
+              "pr": "Atribuir resultado a uma variável:"
+            },
+            "description": {
+              "es": "Variable donde se guardará el resultado",
+              "en": "Variable where the result will be saved",
+              "pr": "Variável onde o resultado será salvo"
             },
             "help": {
               "es": "Nombre de variable sin {}",
-              "en": "Variable name without {}"
+              "en": "Variable name without {}",
+              "pr": "Nome da variável sem {}"
             },
             "id": "var_",
-            "css": "col-md-12"
+            "css": "col-md-12",
+            "data_type": "str",
+            "default": null,
+            "required": true
           }
         ]
       },
-      "video_youtube": "aMV6cXPMMSo",
+      "video_youtube": "",
       "icon": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBvbHlnb24gc3R5bGU9ImZpbGw6IzAwQkNENDsiIHBvaW50cz0iMjI0LDI0MCAyMjQsNTIgMCw4MCAwLDI0MCAJIi8+DQoJPHBvbHlnb24gc3R5bGU9ImZpbGw6IzAwQkNENDsiIHBvaW50cz0iMjU2LDI0MCA1MTIsMjQwIDUxMiwxNiAyNTYsNDggCSIvPg0KCTxwb2x5Z29uIHN0eWxlPSJmaWxsOiMwMEJDRDQ7IiBwb2ludHM9IjI1NiwyNzIgMjU2LDQ2NCA1MTIsNDk2IDUxMiwyNzIgCSIvPg0KCTxwb2x5Z29uIHN0eWxlPSJmaWxsOiMwMEJDRDQ7IiBwb2ludHM9IjIyNCwyNzIgMCwyNzIgMCw0MzIgMjI0LDQ2MCAJIi8+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==",
       "module": "getResolution",
       "module_name": "Windows",
@@ -64,16 +86,22 @@
       "docker": false
     },
     {
+      "es": {
+        "title": "Obtener todas las resoluciones",
+        "description": "Retorna todas las resoluciones de pantalla permitidas en la pantalla principal",
+        "title_options": "Seleccione una opción",
+        "options": null
+      },
       "en": {
         "title": "Get All resolutions",
-        "description": "Return all screen resolution allowed",
+        "description": "Returns all allowed screen resolutions on the main screen",
         "title_options": "Select Option",
         "options": null
       },
-      "es": {
-        "title": "Obtener todas las resoluciones",
-        "description": "Retorna todas las resoluciones de la pantalla permitidas",
-        "title_options": "Seleccione una opción",
+      "pr": {
+        "title": "Obter todas as resoluções",
+        "description": "Retorna todas as resoluções de tela permitidas na tela principal",
+        "title_options": "Selecione uma opção",
         "options": null
       },
       "form": {
@@ -84,18 +112,27 @@
             "placeholder": "Variable",
             "title": {
               "es": "Asignar resultado a variable:",
-              "en": "Assign result to a variable:"
+              "en": "Assign result to a variable:",
+              "pr": "Atribuir resultado a uma variável:"
+            },
+            "description": {
+              "es": "Variable donde se guardará el resultado",
+              "en": "Variable where the result will be saved",
+              "pr": "Variável onde o resultado será salvo"
             },
             "help": {
               "es": "Nombre de variable sin {}",
               "en": "Variable name without {}"
             },
             "id": "var_",
-            "css": "col-md-12"
+            "css": "col-md-12",
+            "data_type": "str",
+            "default": null,
+            "required": true
           }
         ]
       },
-      "video_youtube": "aMV6cXPMMSo",
+      "video_youtube": "",
       "icon": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBvbHlnb24gc3R5bGU9ImZpbGw6IzAwQkNENDsiIHBvaW50cz0iMjI0LDI0MCAyMjQsNTIgMCw4MCAwLDI0MCAJIi8+DQoJPHBvbHlnb24gc3R5bGU9ImZpbGw6IzAwQkNENDsiIHBvaW50cz0iMjU2LDI0MCA1MTIsMjQwIDUxMiwxNiAyNTYsNDggCSIvPg0KCTxwb2x5Z29uIHN0eWxlPSJmaWxsOiMwMEJDRDQ7IiBwb2ludHM9IjI1NiwyNzIgMjU2LDQ2NCA1MTIsNDk2IDUxMiwyNzIgCSIvPg0KCTxwb2x5Z29uIHN0eWxlPSJmaWxsOiMwMEJDRDQ7IiBwb2ludHM9IjIyNCwyNzIgMCwyNzIgMCw0MzIgMjI0LDQ2MCAJIi8+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==",
       "module": "getAllResolutions",
       "module_name": "Windows",
@@ -109,16 +146,22 @@
       "docker": false
     },
     {
+      "es": {
+        "title": "Cambiar resolución",
+        "description": "Modifica la resolución de la pantalla principal a la indicada. Debe ser una resolución permitida por el sistema",
+        "title_options": "Seleccione una opción",
+        "options": null
+      },
       "en": {
         "title": "Change resolution",
-        "description": "Resize screen resolution",
+        "description": "Change the resolution of the main screen to the indicated one. It must be a resolution allowed by the system",
         "title_options": "Select Option",
         "options": null
       },
-      "es": {
-        "title": "Cambiar resolución",
-        "description": "Modifica la resolución de pantalla",
-        "title_options": "Seleccione una opción",
+      "pr": {
+        "title": "Alterar resolução",
+        "description": "Altera a resolução da tela principal para a indicada. Deve ser uma resolução permitida pelo sistema",
+        "title_options": "Selecione uma opção",
         "options": null
       },
       "form": {
@@ -129,14 +172,23 @@
             "placeholder": "800,600",
             "title": {
               "es": "Resolución",
-              "en": "Resolution"
+              "en": "Resolution",
+              "pr": "Resolução"
+            },
+            "description": {
+              "es": "Resolución de pantalla (ancho,alto)",
+              "en": "Screen resolution (width,height)",
+              "pr": "Resolução da tela (largura,altura)"
             },
             "id": "resolution",
-            "css": "col-md-12"
+            "css": "col-md-12",
+            "data_type": "str",
+            "default": null,
+            "required": true
           }
         ]
       },
-      "video_youtube": "aMV6cXPMMSo",
+      "video_youtube": "",
       "icon": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBvbHlnb24gc3R5bGU9ImZpbGw6IzAwQkNENDsiIHBvaW50cz0iMjI0LDI0MCAyMjQsNTIgMCw4MCAwLDI0MCAJIi8+DQoJPHBvbHlnb24gc3R5bGU9ImZpbGw6IzAwQkNENDsiIHBvaW50cz0iMjU2LDI0MCA1MTIsMjQwIDUxMiwxNiAyNTYsNDggCSIvPg0KCTxwb2x5Z29uIHN0eWxlPSJmaWxsOiMwMEJDRDQ7IiBwb2ludHM9IjI1NiwyNzIgMjU2LDQ2NCA1MTIsNDk2IDUxMiwyNzIgCSIvPg0KCTxwb2x5Z29uIHN0eWxlPSJmaWxsOiMwMEJDRDQ7IiBwb2ludHM9IjIyNCwyNzIgMCwyNzIgMCw0MzIgMjI0LDQ2MCAJIi8+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==",
       "module": "resize",
       "module_name": "Windows",
@@ -152,14 +204,20 @@
     {
       "en": {
         "title": "Get User Name",
-        "description": "Return user name",
+        "description": "Returns the current user name",
         "title_options": "Select Option",
         "options": null
       },
       "es": {
         "title": "Obtener nombre de usuario",
-        "description": "Retorna el nombre de usuario actual",
+        "description": "Devuelve el nombre del usuario actual",
         "title_options": "Seleccione una opción",
+        "options": null
+      },
+      "pr": {
+        "title": "Obter nome do usuário",
+        "description": "Retorna o nome do usuário atual",
+        "title_options": "Selecione uma opção",
         "options": null
       },
       "form": {
@@ -170,18 +228,28 @@
             "placeholder": "Variable",
             "title": {
               "es": "Asignar resultado a variable:",
-              "en": "Assign result to a variable:"
+              "en": "Assign result to a variable:",
+              "pr": "Atribuir resultado a uma variável:"
+            },
+            "description": {
+              "es": "Variable donde se guardará el resultado",
+              "en": "Variable where the result will be saved",
+              "pr": "Variável onde o resultado será salvo"
             },
             "help": {
               "es": "Nombre de variable sin {}",
-              "en": "Variable name without {}"
+              "en": "Variable name without {}",
+              "pr": "Nome da variável sem {}"
             },
             "id": "var_",
-            "css": "col-md-12"
+            "css": "col-md-12",
+            "data_type": "str",
+            "default": null,
+            "required": true
           }
         ]
       },
-      "video_youtube": "aMV6cXPMMSo",
+      "video_youtube": "",
       "icon": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBvbHlnb24gc3R5bGU9ImZpbGw6IzAwQkNENDsiIHBvaW50cz0iMjI0LDI0MCAyMjQsNTIgMCw4MCAwLDI0MCAJIi8+DQoJPHBvbHlnb24gc3R5bGU9ImZpbGw6IzAwQkNENDsiIHBvaW50cz0iMjU2LDI0MCA1MTIsMjQwIDUxMiwxNiAyNTYsNDggCSIvPg0KCTxwb2x5Z29uIHN0eWxlPSJmaWxsOiMwMEJDRDQ7IiBwb2ludHM9IjI1NiwyNzIgMjU2LDQ2NCA1MTIsNDk2IDUxMiwyNzIgCSIvPg0KCTxwb2x5Z29uIHN0eWxlPSJmaWxsOiMwMEJDRDQ7IiBwb2ludHM9IjIyNCwyNzIgMCwyNzIgMCw0MzIgMjI0LDQ2MCAJIi8+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==",
       "module": "getUserName",
       "module_name": "Windows",
@@ -195,22 +263,29 @@
       "docker": false
     },
     {
-      "en": {
-        "title": "Lock Windows Screen",
-        "description": "Lock Windows Screen",
-        "title_options": "Select Option",
-        "options": null
-      },
       "es": {
         "title": "Bloquear pantalla ",
         "description": "Bloquea la pantalla de Windows",
         "title_options": "Seleccione una opción",
         "options": null
       },
+      "en": {
+        "title": "Lock Windows Screen",
+        "description": "Locks the Windows screen",
+        "title_options": "Select Option",
+        "options": null
+      },
+      "pr": {
+        "title": "Bloquear tela",
+        "description": "Bloqueia a tela do Windows",
+        "title_options": "Selecione uma opção",
+        "options": null
+      },
       "form": {
+        "inputs": [],
         "css": "modal-lg"
       },
-      "video_youtube": "aMV6cXPMMSo",
+      "video_youtube": "",
       "icon": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBvbHlnb24gc3R5bGU9ImZpbGw6IzAwQkNENDsiIHBvaW50cz0iMjI0LDI0MCAyMjQsNTIgMCw4MCAwLDI0MCAJIi8+DQoJPHBvbHlnb24gc3R5bGU9ImZpbGw6IzAwQkNENDsiIHBvaW50cz0iMjU2LDI0MCA1MTIsMjQwIDUxMiwxNiAyNTYsNDggCSIvPg0KCTxwb2x5Z29uIHN0eWxlPSJmaWxsOiMwMEJDRDQ7IiBwb2ludHM9IjI1NiwyNzIgMjU2LDQ2NCA1MTIsNDk2IDUxMiwyNzIgCSIvPg0KCTxwb2x5Z29uIHN0eWxlPSJmaWxsOiMwMEJDRDQ7IiBwb2ludHM9IjIyNCwyNzIgMCwyNzIgMCw0MzIgMjI0LDQ2MCAJIi8+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==",
       "module": "lockWindows",
       "module_name": "Windows",
@@ -225,7 +300,7 @@
     },
     {
       "en": {
-        "title": "Is logged in",
+        "title": "Is logged in?",
         "description": "Checks if the current user is logged in and not on the lockscreen",
         "title_options": "Select Option",
         "options": null
@@ -234,6 +309,12 @@
         "title": "Estoy logeado?",
         "description": "Verifica si el usuario actual esta logeado y no esta bloqueada la pantalla",
         "title_options": "Seleccione una opción",
+        "options": null
+      },
+      "pr": {
+        "title": "Estou logado?",
+        "description": "Verifica se o usuário atual está logado e não está bloqueada a tela",
+        "title_options": "Selecione uma opção",
         "options": null
       },
       "form": {
@@ -246,16 +327,24 @@
               "es": "Asignar resultado a variable:",
               "en": "Assign result to a variable:"
             },
+            "description": {
+              "es": "Variable donde se guardará el resultado",
+              "en": "Variable where the result will be saved",
+              "pr": "Variável onde o resultado será salvo"
+            },
             "help": {
               "es": "Nombre de variable sin {}",
               "en": "Variable name without {}"
             },
             "id": "var_",
-            "css": "col-md-12"
+            "css": "col-md-12",
+            "data_type": "str",
+            "default": null,
+            "required": true
           }
         ]
       },
-      "video_youtube": "aMV6cXPMMSo",
+      "video_youtube": "",
       "icon": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBvbHlnb24gc3R5bGU9ImZpbGw6IzAwQkNENDsiIHBvaW50cz0iMjI0LDI0MCAyMjQsNTIgMCw4MCAwLDI0MCAJIi8+DQoJPHBvbHlnb24gc3R5bGU9ImZpbGw6IzAwQkNENDsiIHBvaW50cz0iMjU2LDI0MCA1MTIsMjQwIDUxMiwxNiAyNTYsNDggCSIvPg0KCTxwb2x5Z29uIHN0eWxlPSJmaWxsOiMwMEJDRDQ7IiBwb2ludHM9IjI1NiwyNzIgMjU2LDQ2NCA1MTIsNDk2IDUxMiwyNzIgCSIvPg0KCTxwb2x5Z29uIHN0eWxlPSJmaWxsOiMwMEJDRDQ7IiBwb2ludHM9IjIyNCwyNzIgMCwyNzIgMCw0MzIgMjI0LDQ2MCAJIi8+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==",
       "module": "isLoggedIn",
       "module_name": "Windows",
@@ -271,14 +360,20 @@
     {
       "en": {
         "title": "Maximize window",
-        "description": "Maximize a window",
+        "description": "Maximizes a window by title",
         "title_options": "Select Option",
         "options": null
       },
       "es": {
         "title": "Maximizar ventana",
-        "description": "Maximiza una ventana",
+        "description": "Maximiza una ventana por titulo",
         "title_options": "Seleccione una opción",
+        "options": null
+      },
+      "pr": {
+        "title": "Maximizar janela",
+        "description": "Maximiza uma janela por título",
+        "title_options": "Selecione uma opção",
         "options": null
       },
       "form": {
@@ -286,17 +381,30 @@
         "inputs": [
           {
             "type": "input",
-            "placeholder": "Titulo de la ventana",
+            "placeholder": {
+              "es": "Titulo de la ventana",
+              "en": "Window title",
+              "pr": "Título da janela"
+            },
             "title": {
-              "es": "Title",
-              "en": "Title"
+              "es": "Titulo",
+              "en": "Title",
+              "pr": "Título"
+            },
+            "description": {
+              "es": "Titulo de la ventana a maximizar",
+              "en": "Window title to maximize",
+              "pr": "Título da janela para maximizar"
             },
             "id": "title",
-            "css": "col-md-12"
+            "css": "col-md-12",
+            "data_type": "str",
+            "default": null,
+            "required": true
           }
         ]
       },
-      "video_youtube": "aMV6cXPMMSo",
+      "video_youtube": "",
       "icon": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBvbHlnb24gc3R5bGU9ImZpbGw6IzAwQkNENDsiIHBvaW50cz0iMjI0LDI0MCAyMjQsNTIgMCw4MCAwLDI0MCAJIi8+DQoJPHBvbHlnb24gc3R5bGU9ImZpbGw6IzAwQkNENDsiIHBvaW50cz0iMjU2LDI0MCA1MTIsMjQwIDUxMiwxNiAyNTYsNDggCSIvPg0KCTxwb2x5Z29uIHN0eWxlPSJmaWxsOiMwMEJDRDQ7IiBwb2ludHM9IjI1NiwyNzIgMjU2LDQ2NCA1MTIsNDk2IDUxMiwyNzIgCSIvPg0KCTxwb2x5Z29uIHN0eWxlPSJmaWxsOiMwMEJDRDQ7IiBwb2ludHM9IjIyNCwyNzIgMCwyNzIgMCw0MzIgMjI0LDQ2MCAJIi8+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==",
       "module": "maximizeWindow",
       "module_name": "Windows",
@@ -310,16 +418,22 @@
       "docker": false
     },
     {
+      "es": {
+        "title": "Restaurar ventana",
+        "description": "Restaura una ventana por titulo",
+        "title_options": "Seleccione una opción",
+        "options": null
+      },
       "en": {
         "title": "Restore window",
-        "description": "Restore a window",
+        "description": "Restore a window by title",
         "title_options": "Select Option",
         "options": null
       },
-      "es": {
-        "title": "Restaurar ventana",
-        "description": "Restaura una ventana",
-        "title_options": "Seleccione una opción",
+      "pr": {
+        "title": "Restaurar janela",
+        "description": "Restaura uma janela por título",
+        "title_options": "Selecione uma opção",
         "options": null
       },
       "form": {
@@ -327,17 +441,30 @@
         "inputs": [
           {
             "type": "input",
-            "placeholder": "Titulo de la ventana",
+            "placeholder": {
+              "es": "Titulo de la ventana",
+              "en": "Window title",
+              "pr": "Título da janela"
+            },
             "title": {
-              "es": "Title",
-              "en": "Title"
+              "es": "Titulo",
+              "en": "Title",
+              "pr": "Título"
+            },
+            "description": {
+              "es": "Titulo de la ventana a restaurar",
+              "en": "Window title to restore",
+              "pr": "Título da janela para restaurar"
             },
             "id": "title",
-            "css": "col-md-12"
+            "css": "col-md-12",
+            "data_type": "str",
+            "default": null,
+            "required": true
           }
         ]
       },
-      "video_youtube": "aMV6cXPMMSo",
+      "video_youtube": "",
       "icon": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBvbHlnb24gc3R5bGU9ImZpbGw6IzAwQkNENDsiIHBvaW50cz0iMjI0LDI0MCAyMjQsNTIgMCw4MCAwLDI0MCAJIi8+DQoJPHBvbHlnb24gc3R5bGU9ImZpbGw6IzAwQkNENDsiIHBvaW50cz0iMjU2LDI0MCA1MTIsMjQwIDUxMiwxNiAyNTYsNDggCSIvPg0KCTxwb2x5Z29uIHN0eWxlPSJmaWxsOiMwMEJDRDQ7IiBwb2ludHM9IjI1NiwyNzIgMjU2LDQ2NCA1MTIsNDk2IDUxMiwyNzIgCSIvPg0KCTxwb2x5Z29uIHN0eWxlPSJmaWxsOiMwMEJDRDQ7IiBwb2ludHM9IjIyNCwyNzIgMCwyNzIgMCw0MzIgMjI0LDQ2MCAJIi8+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==",
       "module": "restoreWindow",
       "module_name": "Windows",
@@ -353,14 +480,20 @@
     {
       "en": {
         "title": "Minimize window",
-        "description": "Minimize a window",
+        "description": "Minimize a window by title",
         "title_options": "Select Option",
         "options": null
       },
       "es": {
         "title": "Minimizar ventana",
-        "description": "Minimiza una ventana",
+        "description": "Minimiza una ventana por título",
         "title_options": "Seleccione una opción",
+        "options": null
+      },
+      "pr": {
+        "title": "Minimizar janela",
+        "description": "Minimizar uma janela por título",
+        "title_options": "Selecione uma opção",
         "options": null
       },
       "form": {
@@ -368,17 +501,30 @@
         "inputs": [
           {
             "type": "input",
-            "placeholder": "Titulo de la ventana",
+            "placeholder": {
+              "es": "Titulo de la ventana",
+              "en": "Window title",
+              "pr": "Título da janela"
+            },
             "title": {
-              "es": "Title",
-              "en": "Title"
+              "es": "Titulo",
+              "en": "Title",
+              "pr": "Título"
+            },
+            "description": {
+              "es": "Titulo de la ventana a minimizar",
+              "en": "Window title to minimize",
+              "pr": "Título da janela para minimizar"
             },
             "id": "title",
-            "css": "col-md-12"
+            "css": "col-md-12",
+            "data_type": "str",
+            "default": null,
+            "required": true
           }
         ]
       },
-      "video_youtube": "aMV6cXPMMSo",
+      "video_youtube": "",
       "icon": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBvbHlnb24gc3R5bGU9ImZpbGw6IzAwQkNENDsiIHBvaW50cz0iMjI0LDI0MCAyMjQsNTIgMCw4MCAwLDI0MCAJIi8+DQoJPHBvbHlnb24gc3R5bGU9ImZpbGw6IzAwQkNENDsiIHBvaW50cz0iMjU2LDI0MCA1MTIsMjQwIDUxMiwxNiAyNTYsNDggCSIvPg0KCTxwb2x5Z29uIHN0eWxlPSJmaWxsOiMwMEJDRDQ7IiBwb2ludHM9IjI1NiwyNzIgMjU2LDQ2NCA1MTIsNDk2IDUxMiwyNzIgCSIvPg0KCTxwb2x5Z29uIHN0eWxlPSJmaWxsOiMwMEJDRDQ7IiBwb2ludHM9IjIyNCwyNzIgMCwyNzIgMCw0MzIgMjI0LDQ2MCAJIi8+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==",
       "module": "minimizeWindow",
       "module_name": "Windows",
@@ -394,14 +540,20 @@
     {
         "en": {
             "title": "List open windows",
-            "description": "List open windows",
+            "description": "List open windows by title and handle if you want it",
             "title_options": "Select Option",
             "options": null
         },
         "es": {
             "title": "Listar ventanas abiertas",
-            "description": "Lista las ventanas abiertas",
+            "description": "Lista las ventanas abiertas por título y handle si lo desea",
             "title_options": "Seleccione una opción",
+            "options": null
+        },
+        "pr": {
+            "title": "Listar janelas abertas",
+            "description": "Lista as janelas abertas",
+            "title_options": "Selecione uma opção",
             "options": null
         },
         "form": {
@@ -411,31 +563,57 @@
                     "type": "input",
                     "placeholder": {
                         "es": "Variable",
-                        "en": "Variable"
+                        "en": "Variable",
+                        "pr": "Variável"
                     },
                     "title": {
                         "es": "Guardar en",
-                        "en": "Save in"
+                        "en": "Save in",
+                        "pr": "Salvar em"
+                    },
+                    "description": {
+                        "es": "Variable donde se guardará el resultado",
+                        "en": "Variable where the result will be saved",
+                        "pr": "Variável onde o resultado será salvo"
+                    },
+                    "help": {
+                        "es": "Nobre de la variable sin {}",
+                        "en": "Variable name without {}",
+                        "pr": "Nome da variável sem {}"
                     },
                     "id": "varToSaveIn",
-                    "css": "col-md-6"
+                    "css": "col-md-6",
+                    "data_type": "str",
+                    "default": null,
+                    "required": true
                 },
                 {
                     "type": "checkbox",
                     "placeholder": {
-                        "es": "Checkbox",
-                        "en": "Checkbox"                        
+                        "es": "False",
+                        "en": "False",
+                        "pr": "False"                     
                     },
                     "title": {
                         "es": "Desea los handles?",
-                        "en": "Do you want the handles also?"
+                        "en": "Do you want the handles?",
+                        "pr": "Deseja os handles?"
+                    },
+                    "description": {
+                        "es": "Marcar si se desea obtener los handles de las ventanas",
+                        "en": "Check if you want the handles of the windows",
+                        "pr": "Marque se deseja obter os handles das janelas"
                     },
                     "help": {
                         "es": "Marcar si lo desea",
-                        "en": "Check if you want them"
+                        "en": "Check if you want them",
+                        "pr": "Marque se deseja"
                     },
                     "id": "checkHandles",
-                    "css": "col-md-6"
+                    "css": "col-md-6",
+                    "data_type": "bool",
+                    "default": null,
+                    "required": false
                 },
                 {
                     "type": "input",
@@ -447,8 +625,15 @@
                         "es": "Filtro",
                         "en": "Filter"
                     },
+                    "description": {
+                        "es": "Palabra a buscar en el título de las ventanas",
+                        "en": "Word to find in the title of the windows"
+                    },
                     "id": "varFilter",
-                    "css": "col-md-6"
+                    "css": "col-md-6",
+                    "data_type": "str",
+                    "default": null,
+                    "required": false
                 }
             ]
         },
@@ -478,22 +663,41 @@
         "title_options": "Seleccione una opción",
         "options": null
       },
+      "pr": {
+        "title": "Traga janela para frente",
+        "description": "Traga uma janela para frente",
+        "title_options": "Selecione uma opção",
+        "options": null
+      },
       "form": {
         "css": "modal-lg",
         "inputs": [
           {
             "type": "input",
-            "placeholder": "Titulo de la ventana",
+            "placeholder": {
+              "es": "Titulo de la ventana",
+              "en": "Window title",
+              "pr": "Título da janela"
+            },
             "title": {
-              "es": "Title",
-              "en": "Title"
+              "es": "Titulo",
+              "en": "Title",
+              "pr": "Título"
+            },
+            "description": {
+              "es": "Titulo de la ventana a traer al frente",
+              "en": "Title of the window to set to foreground",
+              "pr": "Título da janela para trazer para frente"
             },
             "id": "title",
-            "css": "col-md-12"
+            "css": "col-md-12",
+            "data_type": "str",
+            "default": null,
+            "required": true
           }
         ]
       },
-      "video_youtube": "aMV6cXPMMSo",
+      "video_youtube": "",
       "icon": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBvbHlnb24gc3R5bGU9ImZpbGw6IzAwQkNENDsiIHBvaW50cz0iMjI0LDI0MCAyMjQsNTIgMCw4MCAwLDI0MCAJIi8+DQoJPHBvbHlnb24gc3R5bGU9ImZpbGw6IzAwQkNENDsiIHBvaW50cz0iMjU2LDI0MCA1MTIsMjQwIDUxMiwxNiAyNTYsNDggCSIvPg0KCTxwb2x5Z29uIHN0eWxlPSJmaWxsOiMwMEJDRDQ7IiBwb2ludHM9IjI1NiwyNzIgMjU2LDQ2NCA1MTIsNDk2IDUxMiwyNzIgCSIvPg0KCTxwb2x5Z29uIHN0eWxlPSJmaWxsOiMwMEJDRDQ7IiBwb2ludHM9IjIyNCwyNzIgMCwyNzIgMCw0MzIgMjI0LDQ2MCAJIi8+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==",
       "module": "setForeground",
       "module_name": "Windows",
@@ -524,31 +728,58 @@
         "inputs": [
           {
             "type": "input",
-            "placeholder": "Titulo de la ventana",
+            "placeholder": {
+              "es": "Titulo de la ventana",
+              "en": "Window title",
+              "pr": "Título da janela"
+            },
             "title": {
-              "es": "Title",
-              "en": "Title"
+              "es": "Titulo",
+              "en": "Title",
+              "pr": "Título"
+            },
+            "description": {
+              "es": "Titulo de la ventana a buscar",
+              "en": "Window title to search",
+              "pr": "Título da janela para buscar"
             },
             "id": "title",
-            "css": "col-md-12"
+            "css": "col-md-12",
+            "data_type": "str",
+            "default": null,
+            "required": true
           },
           {
             "type": "input",
-            "placeholder": "Variable",
+            "placeholder": {
+                "es": "Variable",
+                "en": "Variable",
+                "pr": "Variável"
+            },
             "title": {
-              "es": "Asignar resultado a variable:",
-              "en": "Assign result to a variable:"
+                "es": "Guardar en",
+                "en": "Save in",
+                "pr": "Salvar em"
+            },
+            "description": {
+                "es": "Variable donde se guardará el resultado",
+                "en": "Variable where the result will be saved",
+                "pr": "Variável onde o resultado será salvo"
             },
             "help": {
-              "es": "Nombre de variable sin {}",
-              "en": "Variable name without {}"
+                "es": "Nobre de la variable sin {}",
+                "en": "Variable name without {}",
+                "pr": "Nome da variável sem {}"
             },
             "id": "var_",
-            "css": "col-md-12"
+            "css": "col-md-6",
+            "data_type": "str",
+            "default": null,
+            "required": true
           }
         ]
       },
-      "video_youtube": "aMV6cXPMMSo",
+      "video_youtube": "",
       "icon": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBvbHlnb24gc3R5bGU9ImZpbGw6IzAwQkNENDsiIHBvaW50cz0iMjI0LDI0MCAyMjQsNTIgMCw4MCAwLDI0MCAJIi8+DQoJPHBvbHlnb24gc3R5bGU9ImZpbGw6IzAwQkNENDsiIHBvaW50cz0iMjU2LDI0MCA1MTIsMjQwIDUxMiwxNiAyNTYsNDggCSIvPg0KCTxwb2x5Z29uIHN0eWxlPSJmaWxsOiMwMEJDRDQ7IiBwb2ludHM9IjI1NiwyNzIgMjU2LDQ2NCA1MTIsNDk2IDUxMiwyNzIgCSIvPg0KCTxwb2x5Z29uIHN0eWxlPSJmaWxsOiMwMEJDRDQ7IiBwb2ludHM9IjIyNCwyNzIgMCwyNzIgMCw0MzIgMjI0LDQ2MCAJIi8+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==",
       "module": "findWindow",
       "module_name": "Windows",
@@ -585,25 +816,42 @@
               "en": "Title"
             },
             "id": "title",
-            "css": "col-md-12"
+            "css": "col-md-12",
+            "data_type": "str",
+            "default": null,
+            "required": true
           },
           {
             "type": "input",
-            "placeholder": "Variable",
+            "placeholder": {
+                "es": "Variable",
+                "en": "Variable",
+                "pr": "Variável"
+            },
             "title": {
-              "es": "Asignar resultado a variable:",
-              "en": "Assign result to a variable:"
+                "es": "Asignar resultado a variable",
+                "en": "Save result in variable",
+                "pr": "Salvar resultado em variável"
+            },
+            "description": {
+                "es": "Variable donde se guardará el resultado",
+                "en": "Variable where the result will be saved",
+                "pr": "Variável onde o resultado será salvo"
             },
             "help": {
-              "es": "Nombre de variable sin {}",
-              "en": "Variable name without {}"
+                "es": "Nobre de la variable sin {}",
+                "en": "Variable name without {}",
+                "pr": "Nome da variável sem {}"
             },
             "id": "var_",
-            "css": "col-md-12"
+            "css": "col-md-6",
+            "data_type": "str",
+            "default": null,
+            "required": true
           }
         ]
       },
-      "video_youtube": "aMV6cXPMMSo",
+      "video_youtube": "",
       "icon": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBvbHlnb24gc3R5bGU9ImZpbGw6IzAwQkNENDsiIHBvaW50cz0iMjI0LDI0MCAyMjQsNTIgMCw4MCAwLDI0MCAJIi8+DQoJPHBvbHlnb24gc3R5bGU9ImZpbGw6IzAwQkNENDsiIHBvaW50cz0iMjU2LDI0MCA1MTIsMjQwIDUxMiwxNiAyNTYsNDggCSIvPg0KCTxwb2x5Z29uIHN0eWxlPSJmaWxsOiMwMEJDRDQ7IiBwb2ludHM9IjI1NiwyNzIgMjU2LDQ2NCA1MTIsNDk2IDUxMiwyNzIgCSIvPg0KCTxwb2x5Z29uIHN0eWxlPSJmaWxsOiMwMEJDRDQ7IiBwb2ludHM9IjIyNCwyNzIgMCwyNzIgMCw0MzIgMjI0LDQ2MCAJIi8+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==",
       "module": "getServiceStatus",
       "module_name": "Windows",
@@ -629,36 +877,69 @@
         "title_options": "Seleccione una opción",
         "options": null
       },
+      "pr": {
+        "title": "Iniciar serviço",
+        "description": "Inicia um serviço",
+        "title_options": "Selecione uma opção",
+        "options": null
+      },
       "form": {
         "css": "modal-lg",
         "inputs": [
           {
             "type": "input",
-            "placeholder": "Titulo del servicio",
+            "placeholder": {
+              "es": "Título del servicio",
+              "en": "Service title",
+              "pr": "Título do serviço"
+            },
             "title": {
               "es": "Title",
-              "en": "Title"
+              "en": "Title",
+              "pr": "Título"
+            },
+            "description": {
+              "es": "Título del servicio a iniciar",
+              "en": "Service title to start",
+              "pr": "Título do serviço a iniciar"
             },
             "id": "title",
-            "css": "col-md-12"
+            "css": "col-md-12",
+            "data_type": "str",
+            "default": null,
+            "required": true
           },
           {
             "type": "input",
-            "placeholder": "Variable",
+            "placeholder": {
+                "es": "Variable",
+                "en": "Variable",
+                "pr": "Variável"
+            },
             "title": {
-              "es": "Asignar resultado a variable:",
-              "en": "Assign result to a variable:"
+                "es": "Asignar resultado a variable",
+                "en": "Assign result to variable",
+                "pr": "Atribuir resultado à variável"
+            },
+            "description": {
+                "es": "Variable donde se guardará el resultado",
+                "en": "Variable where the result will be saved",
+                "pr": "Variável onde o resultado será salvo"
             },
             "help": {
-              "es": "Nombre de variable sin {}",
-              "en": "Variable name without {}"
+                "es": "Nobre de la variable sin {}",
+                "en": "Variable name without {}",
+                "pr": "Nome da variável sem {}"
             },
             "id": "var_",
-            "css": "col-md-12"
+            "css": "col-md-6",
+            "data_type": "str",
+            "default": null,
+            "required": true
           }
         ]
       },
-      "video_youtube": "aMV6cXPMMSo",
+      "video_youtube": "",
       "icon": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBvbHlnb24gc3R5bGU9ImZpbGw6IzAwQkNENDsiIHBvaW50cz0iMjI0LDI0MCAyMjQsNTIgMCw4MCAwLDI0MCAJIi8+DQoJPHBvbHlnb24gc3R5bGU9ImZpbGw6IzAwQkNENDsiIHBvaW50cz0iMjU2LDI0MCA1MTIsMjQwIDUxMiwxNiAyNTYsNDggCSIvPg0KCTxwb2x5Z29uIHN0eWxlPSJmaWxsOiMwMEJDRDQ7IiBwb2ludHM9IjI1NiwyNzIgMjU2LDQ2NCA1MTIsNDk2IDUxMiwyNzIgCSIvPg0KCTxwb2x5Z29uIHN0eWxlPSJmaWxsOiMwMEJDRDQ7IiBwb2ludHM9IjIyNCwyNzIgMCwyNzIgMCw0MzIgMjI0LDQ2MCAJIi8+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==",
       "module": "startService",
       "module_name": "Windows",
@@ -684,36 +965,69 @@
         "title_options": "Seleccione una opción",
         "options": null
       },
+      "pr": {
+        "title": "Parar serviço",
+        "description": "Para um serviço",
+        "title_options": "Selecione uma opção",
+        "options": null
+      },
       "form": {
         "css": "modal-lg",
         "inputs": [
           {
             "type": "input",
-            "placeholder": "Titulo del servicio",
+            "placeholder": {
+              "es": "Título del servicio",
+              "en": "Service title",
+              "pr": "Título do serviço"
+            },
             "title": {
               "es": "Title",
-              "en": "Title"
+              "en": "Title",
+              "pr": "Título"
+            },
+            "description": {
+              "es": "Título del servicio a parar",
+              "en": "Service title to stop",
+              "pr": "Título do serviço a parar"
             },
             "id": "title",
-            "css": "col-md-12"
+            "css": "col-md-12",
+            "data_type": "str",
+            "default": null,
+            "required": true
           },
           {
             "type": "input",
-            "placeholder": "Variable",
+            "placeholder": {
+                "es": "Variable",
+                "en": "Variable",
+                "pr": "Variável"
+            },
             "title": {
-              "es": "Asignar resultado a variable:",
-              "en": "Assign result to a variable:"
+                "es": "Asignar resultado a variable",
+                "en": "Assign result to variable",
+                "pr": "Atribuir resultado à variável"
+            },
+            "description": {
+                "es": "Variable donde se guardará el resultado",
+                "en": "Variable where the result will be saved",
+                "pr": "Variável onde o resultado será salvo"
             },
             "help": {
-              "es": "Nombre de variable sin {}",
-              "en": "Variable name without {}"
+                "es": "Nobre de la variable sin {}",
+                "en": "Variable name without {}",
+                "pr": "Nome da variável sem {}"
             },
             "id": "var_",
-            "css": "col-md-12"
+            "css": "col-md-6",
+            "data_type": "str",
+            "default": null,
+            "required": true
           }
         ]
       },
-      "video_youtube": "aMV6cXPMMSo",
+      "video_youtube": "",
       "icon": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBvbHlnb24gc3R5bGU9ImZpbGw6IzAwQkNENDsiIHBvaW50cz0iMjI0LDI0MCAyMjQsNTIgMCw4MCAwLDI0MCAJIi8+DQoJPHBvbHlnb24gc3R5bGU9ImZpbGw6IzAwQkNENDsiIHBvaW50cz0iMjU2LDI0MCA1MTIsMjQwIDUxMiwxNiAyNTYsNDggCSIvPg0KCTxwb2x5Z29uIHN0eWxlPSJmaWxsOiMwMEJDRDQ7IiBwb2ludHM9IjI1NiwyNzIgMjU2LDQ2NCA1MTIsNDk2IDUxMiwyNzIgCSIvPg0KCTxwb2x5Z29uIHN0eWxlPSJmaWxsOiMwMEJDRDQ7IiBwb2ludHM9IjIyNCwyNzIgMCwyNzIgMCw0MzIgMjI0LDQ2MCAJIi8+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==",
       "module": "stopService",
       "module_name": "Windows",
@@ -739,42 +1053,74 @@
         "title_options": "Seleccione una opción",
         "options": null
       },
+      "pr": {
+        "title": "Mover e redimensionar janela",
+        "description": "Muda a posição e dimensões de uma janela obtida por título",
+        "title_options": "Selecione uma opção",
+        "options": null
+      },
       "form": {
         "css": "modal-lg",
         "inputs": [
           {
             "type": "input",
-            "placeholder": "Titulo del servicio",
+            "placeholder": {
+              "es": "Título",
+              "en": "Title",
+              "pr": "Título"
+            },
             "title": {
               "es": "Title",
-              "en": "Title"
+              "en": "Title",
+              "pr": "Título"
             },
             "id": "title",
-            "css": "col-md-12"
+            "css": "col-md-12",
+            "data_type": "str",
+            "default": null,
+            "required": true
           },
           {
             "type": "input",
             "placeholder": "0,0",
             "title": {
               "es": "Coordenadas (x, y):",
-              "en": "Coordinates (x, y):"
+              "en": "Coordinates (x, y):",
+              "pr": "Coordenadas (x, y):"
+            },
+            "description": {
+              "es": "Coordenadas de la ventana en el escritorio",
+              "en": "Window coordinates on desktop",
+              "pr": "Coordenadas da janela no desktop"
             },
             "id": "coordinates",
-            "css": "col-md-6"
+            "css": "col-md-6",
+            "data_type": "str",
+            "default": null,
+            "required": false
           },
           {
             "type": "input",
             "placeholder": "0,0",
             "title": {
               "es": "Dimensiones (Ancho, Alto):",
-              "en": "Dimension (Width, Height):"
+              "en": "Dimension (Width, Height):",
+              "pr": "Dimensão (Largura, Altura):"
+            },
+            "description": {
+              "es": "Dimensiones de la ventana",
+              "en": "Window dimensions",
+              "pr": "Dimensões da janela"
             },
             "id": "size",
-            "css": "col-md-6"
+            "css": "col-md-6",
+            "data_type": "str",
+            "default": null,
+            "required": false
           }
         ]
       },
-      "video_youtube": "aMV6cXPMMSo",
+      "video_youtube": "",
       "icon": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBvbHlnb24gc3R5bGU9ImZpbGw6IzAwQkNENDsiIHBvaW50cz0iMjI0LDI0MCAyMjQsNTIgMCw4MCAwLDI0MCAJIi8+DQoJPHBvbHlnb24gc3R5bGU9ImZpbGw6IzAwQkNENDsiIHBvaW50cz0iMjU2LDI0MCA1MTIsMjQwIDUxMiwxNiAyNTYsNDggCSIvPg0KCTxwb2x5Z29uIHN0eWxlPSJmaWxsOiMwMEJDRDQ7IiBwb2ludHM9IjI1NiwyNzIgMjU2LDQ2NCA1MTIsNDk2IDUxMiwyNzIgCSIvPg0KCTxwb2x5Z29uIHN0eWxlPSJmaWxsOiMwMEJDRDQ7IiBwb2ludHM9IjIyNCwyNzIgMCwyNzIgMCw0MzIgMjI0LDQ2MCAJIi8+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==",
       "module": "moveWindow",
       "module_name": "Windows",
