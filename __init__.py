@@ -24,6 +24,7 @@ Para instalar librerias se debe ingresar por terminal a la carpeta "libs"
 
 """
 import json
+import traceback
 base_path = tmp_global_obj["basepath"]
 cur_path = base_path + "modules" + os.sep + "Windows" + os.sep + "libs" + os.sep
 sys.path.append(cur_path)
@@ -122,6 +123,7 @@ if module == "maximizeWindow":
         window.maximize_window(title)
     except Exception as e:
         print("\x1B[" + "31;40mAn error occurred\x1B[" + "0m")
+        traceback.print_exc()
         PrintException()
         raise e
 
@@ -133,6 +135,7 @@ if module == "restoreWindow":
         window.restore_window(title)
     except Exception as e:
         print("\x1B[" + "31;40mAn error occurred\x1B[" + "0m")
+        traceback.print_exc()
         PrintException()
         raise e
 
@@ -251,28 +254,41 @@ if module == "getServiceStatus":
 
 if module == "startService":
     import service_windows
+    from time import sleep
 
     title = GetParams("title")
     try:
         service_status = service_windows.get_service_status(title)
         if service_status != "running":
-            service_windows.start_service(title)
+            try:
+                service_windows.start_service(title)
+            except:
+                subprocess.run(["sc", "start", title])
+                sleep(1)
+
             service_status = service_windows.get_service_status(title)
         var_ = GetParams("var_")
         SetVar(var_, service_status)
     except Exception as e:
         print("\x1B[" + "31;40mAn error occurred\x1B[" + "0m")
+        traceback.print_exc()
         PrintException()
         raise e
 
 if module == "stopService":
     import service_windows
+    from time import sleep
 
     title = GetParams("title")
     try:
         service_status = service_windows.get_service_status(title)
         if service_status == "running":
-            service_windows.stop_service(title)
+            try:
+                service_windows.stop_service(title)
+            except:
+                subprocess.run(["sc", "stop", title])
+                sleep(1)
+                
             service_status = service_windows.get_service_status(title)
         var_ = GetParams("var_")
         SetVar(var_, service_status)
