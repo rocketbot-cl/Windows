@@ -54,10 +54,10 @@ Find a window by title
 Get service status
 
 14. Start service  
-Start service
+This command starts a Windows service. Rocketbot.exe must be run as administrator to execute this command.
 
 15. Stop service  
-Stop service
+This command stops a Windows service. Rocketbot.exe must be run as administrator to execute this command.
 
 16. Move and resize window  
 Change position and dimension of windows from title  
