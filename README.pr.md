@@ -47,17 +47,17 @@ Lista as janelas abertas
 11. Traga janela para frente  
 Traga uma janela para frente
 
-12.   
+12. Encontrar janela  
+Encontre uma janela por título
 
-
-13.   
-
+13. Obter estado do serviço  
+Obter estado do serviço
 
 14. Iniciar serviço  
-Inicia um serviço
+Este comando inicia um serviço do Windows. Rocketbot.exe deve ser executado como administrador para executar este comando.
 
 15. Parar serviço  
-Para um serviço
+Este comando para um serviço do Windows. Rocketbot.exe deve ser executado como administrador para executar este comando.
 
 16. Mover e redimensionar janela  
 Muda a posição e dimensões de uma janela obtida por título  

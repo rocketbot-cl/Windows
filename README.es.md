@@ -54,10 +54,10 @@ Busca una ventana por titulo
 Obtener el estado de un servicio
 
 14. Iniciar servicio  
-Inicia un servicio
+Este comando inicia un servicio de Windows. Rocketbot.exe debe ejecutarse como administrador para ejecutar este comando.
 
 15. Parar servicio  
-Para un servicio
+Este comando detiene un servicio de Windows. Rocketbot.exe debe ejecutarse como administrador para ejecutar este comando.
 
 16. Mover y redimensionar ventana  
 Cambia la posición y dimensiones de una ventana obtenida por título  

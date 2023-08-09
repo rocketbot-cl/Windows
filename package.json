@@ -7,7 +7,7 @@
     "pr": "Modulo para trabalhar com a configuração do Windows"
   },
   "disclaimer": "THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "license": "MIT",
   "homepage": "http://rocketbot.com/",
   "linux": false,
@@ -723,6 +723,12 @@
         "title_options": "Seleccione una opción",
         "options": null
       },
+      "pr": {
+        "title": "Encontrar janela",
+        "description": "Encontre uma janela por título",
+        "title_options": "Selecione uma opção",
+        "options": null
+      },
       "form": {
         "css": "modal-lg",
         "inputs": [
@@ -805,6 +811,12 @@
         "title_options": "Seleccione una opción",
         "options": null
       },
+      "pr": {
+        "title": "Obter estado do serviço",
+        "description": "Obter estado do serviço",
+        "title_options": "Selecione uma opção",
+        "options": null
+      },
       "form": {
         "css": "modal-lg",
         "inputs": [
@@ -867,19 +879,19 @@
     {
       "en": {
         "title": "Start service",
-        "description": "Start service",
+        "description": "This command starts a Windows service. Rocketbot.exe must be run as administrator to execute this command.",
         "title_options": "Select Option",
         "options": null
       },
       "es": {
         "title": "Iniciar servicio",
-        "description": "Inicia un servicio",
+        "description": "Este comando inicia un servicio de Windows. Rocketbot.exe debe ejecutarse como administrador para ejecutar este comando.",
         "title_options": "Seleccione una opción",
         "options": null
       },
       "pr": {
         "title": "Iniciar serviço",
-        "description": "Inicia um serviço",
+        "description": "Este comando inicia um serviço do Windows. Rocketbot.exe deve ser executado como administrador para executar este comando.",
         "title_options": "Selecione uma opção",
         "options": null
       },
@@ -955,19 +967,19 @@
     {
       "en": {
         "title": "Stop service",
-        "description": "Stop service",
+        "description": "This command stops a Windows service. Rocketbot.exe must be run as administrator to execute this command.",
         "title_options": "Select Option",
         "options": null
       },
       "es": {
         "title": "Parar servicio",
-        "description": "Para un servicio",
+        "description": "Este comando detiene un servicio de Windows. Rocketbot.exe debe ejecutarse como administrador para ejecutar este comando.",
         "title_options": "Seleccione una opción",
         "options": null
       },
       "pr": {
         "title": "Parar serviço",
-        "description": "Para um serviço",
+        "description": "Este comando para um serviço do Windows. Rocketbot.exe deve ser executado como administrador para executar este comando.",
         "title_options": "Selecione uma opção",
         "options": null
       },

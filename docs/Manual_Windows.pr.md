@@ -92,17 +92,17 @@ Traga uma janela para frente
 | --- | --- | --- |
 |Título|Título da janela para trazer para frente|Título da janela|
 
-### 
+### Encontrar janela
   
-
+Encontre uma janela por título
 |Parâmetros|Descrição|exemplo|
 | --- | --- | --- |
 |Título|Título da janela para buscar|Título da janela|
 |Salvar em|Variável onde o resultado será salvo|Variável|
 
-### 
+### Obter estado do serviço
   
-
+Obter estado do serviço
 |Parâmetros|Descrição|exemplo|
 | --- | --- | --- |
 |Title||Titulo del servicio|
@@ -110,7 +110,7 @@ Traga uma janela para frente
 
 ### Iniciar serviço
   
-Inicia um serviço
+Este comando inicia um serviço do Windows. Rocketbot.exe deve ser executado como administrador para executar este comando.
 |Parâmetros|Descrição|exemplo|
 | --- | --- | --- |
 |Título|Título do serviço a iniciar|Título do serviço|
@@ -118,7 +118,7 @@ Inicia um serviço
 
 ### Parar serviço
   
-Para um serviço
+Este comando para um serviço do Windows. Rocketbot.exe deve ser executado como administrador para executar este comando.
 |Parâmetros|Descrição|exemplo|
 | --- | --- | --- |
 |Título|Título do serviço a parar|Título do serviço|

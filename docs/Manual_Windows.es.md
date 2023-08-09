@@ -110,7 +110,7 @@ Obtener el estado de un servicio
 
 ### Iniciar servicio
   
-Inicia un servicio
+Este comando inicia un servicio de Windows. Rocketbot.exe debe ejecutarse como administrador para ejecutar este comando.
 |Parámetros|Descripción|ejemplo|
 | --- | --- | --- |
 |Title|Título del servicio a iniciar|Título del servicio|
@@ -118,7 +118,7 @@ Inicia un servicio
 
 ### Parar servicio
   
-Para un servicio
+Este comando detiene un servicio de Windows. Rocketbot.exe debe ejecutarse como administrador para ejecutar este comando.
 |Parámetros|Descripción|ejemplo|
 | --- | --- | --- |
 |Title|Título del servicio a parar|Título del servicio|

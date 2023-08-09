@@ -4,7 +4,7 @@ Module for work with Windows configuration
 
 *Read this in other languages: [English](Manual_Windows.md), [Português](Manual_Windows.pr.md), [Español](Manual_Windows.es.md)*
   
-![banner](imgs/Banner_Windows.png o jpg)
+![banner](imgs/Banner_Windows.png)
 ## How to install this module
   
 To install the module in Rocketbot Studio, it can be done in two ways:
@@ -110,7 +110,7 @@ Get service status
 
 ### Start service
   
-Start service
+This command starts a Windows service. Rocketbot.exe must be run as administrator to execute this command.
 |Parameters|Description|example|
 | --- | --- | --- |
 |Title|Service title to start|Service title|
@@ -118,7 +118,7 @@ Start service
 
 ### Stop service
   
-Stop service
+This command stops a Windows service. Rocketbot.exe must be run as administrator to execute this command.
 |Parameters|Description|example|
 | --- | --- | --- |
 |Title|Service title to stop|Service title|
