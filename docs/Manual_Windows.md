@@ -132,3 +132,4 @@ Change position and dimension of windows from title
 |Title||Title|
 |Coordinates (x, y)|Window coordinates on desktop|0,0|
 |Dimension (Width, Height)|Window dimensions|0,0|
+
