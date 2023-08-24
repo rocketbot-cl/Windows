@@ -24,6 +24,7 @@ Para instalar librerias se debe ingresar por terminal a la carpeta "libs"
 
 """
 import json
+import traceback
 base_path = tmp_global_obj["basepath"]
 cur_path = base_path + "modules" + os.sep + "Windows" + os.sep + "libs" + os.sep
 sys.path.append(cur_path)
@@ -51,7 +52,7 @@ if module == "resize":
         else:
             ScreenRes.set()  # Set defaults
     except Exception as e:
-        print("\x1B[" + "31;40mAn error occurred\u2193\x1B[" + "0m")
+        print("\x1B[" + "31;40mAn error occurred\x1B[" + "0m")
         PrintException()
         raise e
 
@@ -63,7 +64,19 @@ if module == "getResolution":
         SetVar(var_, ScreenRes.get())
 
     except Exception as e:
-        print("\x1B[" + "31;40mAn error occurred\u2193\x1B[" + "0m")
+        print("\x1B[" + "31;40mAn error occurred\x1B[" + "0m")
+        PrintException()
+        raise e
+
+if module == "getAllResolutions":
+    from screen import ScreenRes
+
+    var_ = GetParams("var_")
+    try:
+        SetVar(var_, ScreenRes.get_modes())
+
+    except Exception as e:
+        print("\x1B[" + "31;40mAn error occurred\x1B[" + "0m")
         PrintException()
         raise e
 
@@ -75,7 +88,7 @@ if module == "getUserName":
         var_ = GetParams("var_")
         SetVar(var_, username)
     except Exception as e:
-        print("\x1B[" + "31;40mAn error occurred\u2193\x1B[" + "0m")
+        print("\x1B[" + "31;40mAn error occurred\x1B[" + "0m")
         PrintException()
         raise e
 
@@ -86,7 +99,7 @@ if module == "lockWindows":
         print("Se ha bloqueado su pantalla!")
         ScreenRes.lock_windows()
     except Exception as e:
-        print("\x1B[" + "31;40mAn error occurred\u2193\x1B[" + "0m")
+        print("\x1B[" + "31;40mAn error occurred\x1B[" + "0m")
         PrintException()
         raise e
 
@@ -98,7 +111,7 @@ if module == "isLoggedIn":
         is_logged_in = user.is_logged_in()
         SetVar(var_, is_logged_in)
     except Exception as e:
-        print("\x1B[" + "31;40mAn error occurred\u2193\x1B[" + "0m")
+        print("\x1B[" + "31;40mAn error occurred\x1B[" + "0m")
         PrintException()
         raise e
 
@@ -109,7 +122,8 @@ if module == "maximizeWindow":
     try:
         window.maximize_window(title)
     except Exception as e:
-        print("\x1B[" + "31;40mAn error occurred\u2193\x1B[" + "0m")
+        print("\x1B[" + "31;40mAn error occurred\x1B[" + "0m")
+        traceback.print_exc()
         PrintException()
         raise e
 
@@ -120,7 +134,8 @@ if module == "restoreWindow":
     try:
         window.restore_window(title)
     except Exception as e:
-        print("\x1B[" + "31;40mAn error occurred\u2193\x1B[" + "0m")
+        print("\x1B[" + "31;40mAn error occurred\x1B[" + "0m")
+        traceback.print_exc()
         PrintException()
         raise e
 
@@ -131,7 +146,7 @@ if module == "minimizeWindow":
     try:
         window.minimize_window(title)
     except Exception as e:
-        print("\x1B[" + "31;40mAn error occurred\u2193\x1B[" + "0m")
+        print("\x1B[" + "31;40mAn error occurred\x1B[" + "0m")
         PrintException()
         raise e
 
@@ -183,7 +198,7 @@ if module == "listWindows":
         SetVar(varToSaveIn, finalHandleInfo)
 
     except Exception as e:
-        print("\x1B[" + "31;40mAn error occurred\u2193\x1B[" + "0m")
+        print("\x1B[" + "31;40mAn error occurred\x1B[" + "0m")
         PrintException()
         raise e
 
@@ -208,7 +223,7 @@ if module == "setForeground":
                 raise ex
         set_window_to_foreground(title)
     except Exception as e:
-        print("\x1B[" + "31;40mAn error occurred\u2193\x1B[" + "0m")
+        print("\x1B[" + "31;40mAn error occurred\x1B[" + "0m")
         PrintException()
         raise e
 if module == "findWindow":
@@ -220,7 +235,7 @@ if module == "findWindow":
         var_ = GetParams("var_")
         SetVar(var_, window_title)
     except Exception as e:
-        print("\x1B[" + "31;40mAn error occurred\u2193\x1B[" + "0m")
+        print("\x1B[" + "31;40mAn error occurred\x1B[" + "0m")
         PrintException()
         raise e
 
@@ -233,39 +248,52 @@ if module == "getServiceStatus":
         var_ = GetParams("var_")
         SetVar(var_, service_status)
     except Exception as e:
-        print("\x1B[" + "31;40mAn error occurred\u2193\x1B[" + "0m")
+        print("\x1B[" + "31;40mAn error occurred\x1B[" + "0m")
         PrintException()
         raise e
 
 if module == "startService":
     import service_windows
+    from time import sleep
 
     title = GetParams("title")
     try:
         service_status = service_windows.get_service_status(title)
         if service_status != "running":
-            service_windows.start_service(title)
+            try:
+                service_windows.start_service(title)
+            except:
+                subprocess.run(["sc", "start", title])
+                sleep(1)
+
             service_status = service_windows.get_service_status(title)
         var_ = GetParams("var_")
         SetVar(var_, service_status)
     except Exception as e:
-        print("\x1B[" + "31;40mAn error occurred\u2193\x1B[" + "0m")
+        print("\x1B[" + "31;40mAn error occurred\x1B[" + "0m")
+        traceback.print_exc()
         PrintException()
         raise e
 
 if module == "stopService":
     import service_windows
+    from time import sleep
 
     title = GetParams("title")
     try:
         service_status = service_windows.get_service_status(title)
         if service_status == "running":
-            service_windows.stop_service(title)
+            try:
+                service_windows.stop_service(title)
+            except:
+                subprocess.run(["sc", "stop", title])
+                sleep(1)
+                
             service_status = service_windows.get_service_status(title)
         var_ = GetParams("var_")
         SetVar(var_, service_status)
     except Exception as e:
-        print("\x1B[" + "31;40mAn error occurred\u2193\x1B[" + "0m")
+        print("\x1B[" + "31;40mAn error occurred\x1B[" + "0m")
         PrintException()
         raise e
 
