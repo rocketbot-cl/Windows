@@ -206,7 +206,11 @@ if module == "setForeground":
     try:
         import win32gui
         title = GetParams("title")
-        def set_window_to_foreground(title):
+        not_maximize = GetParams("not_maximize") if GetParams("not_maximize") else "False"
+
+
+
+        def set_window_to_foreground(title, not_maximize):
             import win32gui
             import win32con
             import win32com
@@ -215,13 +219,17 @@ if module == "setForeground":
                 if not handle:
                     raise Exception('Could not find a window with title "{}"'.format(title))
 
-                win32gui.ShowWindow(handle, win32con.SW_SHOWMAXIMIZED)
+                if not_maximize == "True":
+                    win32gui.ShowWindow(handle, win32con.SW_SHOWNORMAL)
+                else:
+                    win32gui.ShowWindow(handle, win32con.SW_SHOWMAXIMIZED)
+                    
                 shell = win32com.client.Dispatch("WScript.Shell")
                 shell.SendKeys('%')
                 win32gui.SetForegroundWindow(handle)
             except Exception as ex:
                 raise ex
-        set_window_to_foreground(title)
+        set_window_to_foreground(title, not_maximize)
     except Exception as e:
         print("\x1B[" + "31;40mAn error occurred\x1B[" + "0m")
         PrintException()
@@ -303,7 +311,6 @@ if module == "moveWindow":
     size = GetParams("size")
 
     import win32gui
-
     handle = win32gui.FindWindow(None, title)
     if not size:
         rect = win32gui.GetWindowRect(handle)

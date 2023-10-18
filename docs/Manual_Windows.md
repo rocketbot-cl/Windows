@@ -91,6 +91,7 @@ Set window to foreground
 |Parameters|Description|example|
 | --- | --- | --- |
 |Title|Title of the window to set to foreground|Window title|
+|Keep window unmaximized|Check if you don't want to maximize the window|False|
 
 ### Find window
   
