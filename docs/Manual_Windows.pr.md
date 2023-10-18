@@ -91,6 +91,7 @@ Traga uma janela para frente
 |Parâmetros|Descrição|exemplo|
 | --- | --- | --- |
 |Título|Título da janela para trazer para frente|Título da janela|
+|Manter janela não maximizada|Marque se você não quiser maximizar a janela|False|
 
 ### Encontrar janela
   

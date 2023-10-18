@@ -91,6 +91,7 @@ Trae una ventana al frente
 |Parámetros|Descripción|ejemplo|
 | --- | --- | --- |
 |Titulo|Titulo de la ventana a traer al frente|Titulo de la ventana|
+|Mantener ventana sin maximizar|Marcar en caso de que no se quiera maximizar la ventana|False|
 
 ### Buscar ventana
   
